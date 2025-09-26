@@ -14,5 +14,10 @@ export default defineConfig({
         main: resolve(__dirname, "src/index.html")
       }
     }
+  },
+
+  server: {
+    host: "127.0.0.1",
+    port: 5173
   }
 });
