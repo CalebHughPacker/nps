@@ -281,6 +281,17 @@ h1, h3, h4{
   font-family: var(--bs-font-serif);
 }
 
+h1{
+  font-size: 48px;
+}
+
+h3{
+  font-size: larger;
+}
+
+.intro{
+  margin-left: 15px;
+}
 .info{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -295,8 +306,15 @@ h1, h3, h4{
   
 }
 
-/* footer{
+footer{
   background-image: url("/images/topo_pattern.png");
   background-size: cover;
   background-position: center;
-} */
+  padding: 20px;
+}
+
+@media  (max-width: 600px) {
+  .info{
+    grid-template-columns: 1fr;
+  }
+}
