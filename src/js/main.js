@@ -1,10 +1,8 @@
-import { getParkData, getParkInfoLinks } from "./parkService.mjs";
+import { getParkData, getInfoLinks } from "./parkService.mjs";
 import { setHeaderFooter } from "./setHeaderFooter.mjs";
 import { mediaCardTemplate } from "./templates.mjs";
 
-const parkData = getParkData();
-
-const parkInfoLinks = getParkInfoLinks();
+// const parkData = getParkData();
 
 function setHeaderInfo(data) {
   const disclaimer = document.querySelector(".disclaimer > a");
@@ -15,8 +13,7 @@ function setHeaderInfo(data) {
   document.querySelector(".hero-banner > img").src = data.images[0].url;
 }
 
-setHeaderInfo(parkData);
-setHeaderFooter(parkData);
+
 
 
 function setIntroInfo(data) {
@@ -27,7 +24,7 @@ function setIntroInfo(data) {
 
 }
 
-setIntroInfo(parkData);
+
 
 
 
@@ -38,4 +35,15 @@ function setInfoInfo(data){
   }
 }
 
-setInfoInfo(parkInfoLinks);
+
+
+async function init(){
+  const parkData = await getParkData();
+  const links = getInfoLinks(parkData.images);
+  setHeaderInfo(parkData);
+  setHeaderFooter(parkData);
+  setIntroInfo(parkData);
+  setInfoInfo(links);
+}
+
+init();
