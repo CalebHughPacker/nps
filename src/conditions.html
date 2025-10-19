@@ -6,6 +6,8 @@
     <title>[Park Name]</title>
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="./js/conditions.js"></script>
+    
   </head>
   <body>
     <p class="disclaimer">
@@ -97,74 +99,85 @@
           </div>
       </div>
       <nav class="park-nav">
-        <ul>
+          <ul>
           <li>
-            <a href="conditions.html">
+              <a href="#">
               <span>Info</span>
               <svg class="icon" role="presentation" focusable="false">
-                <use
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xlink:href="/images/sprite.symbol.svg#info">
-                </use>
+                  <use
+                  xmlns:xlink="./conditions.html"
+                  xlink:href="/images/sprite.symbol.svg#info"
+                  ></use>
               </svg>
-            </a>
+              </a>
           </li>
           <li>
-            <a href="alerts.html">
+              <a href="#">
               <span>Alerts</span>
               <svg class="icon" role="presentation" focusable="false">
-                <use
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xlink:href="/images/sprite.symbol.svg#alert">
-                </use>
+                  <use
+                  xmlns:xlink="./conditions.html"
+                  xlink:href="/images/sprite.symbol.svg#alert"
+                  ></use>
               </svg>
-            </a>
+              </a>
           </li>
           <li>
-            <a href="maps.html">
+              <a href="#">
               <span>Maps</span>
               <svg class="icon" role="presentation" focusable="false">
-                <use
+                  <use
                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xlink:href="/images/sprite.symbol.svg#location">
-                </use>
+                  xlink:href="/images/sprite.symbol.svg#location"
+                  ></use>
               </svg>
-            </a>
+              </a>
           </li>
           <li>
-            <a href="calendar.html">
+              <a href="#">
               <span>Calendar</span>
               <svg class="icon" role="presentation" focusable="false">
-                <use
+                  <use
                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xlink:href="/images/sprite.symbol.svg#calendar">
-                </use>
+                  xlink:href="/images/sprite.symbol.svg#calendar"
+                  ></use>
               </svg>
-            </a>
+              </a>
           </li>
           <li>
-            <a href="fees.html">
+              <a href="#">
               <span>Fees</span>
               <svg class="icon" role="presentation" focusable="false">
-                <use
+                  <use
                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xlink:href="/images/sprite.symbol.svg#fee-22">
-                </use>
+                  xlink:href="/images/sprite.symbol.svg#fee-22"
+                  ></use>
               </svg>
-            </a>
+              </a>
           </li>
-        </ul>
+          </ul>
       </nav>
-
       </section>
     </header>
     <main id="main">
-      <section class="intro">
-        <h1 class="name">[park name]</h1>
-        <p class="desc">[description]</p>
+      <h1>Current Conditions</h1>
+      <section class="alerts">
+        <h2>Alerts</h2>
+        <ul></ul>
       </section>
-      <section class="info">
-
+      <section class="visitor">
+        <h2>Visitor Services</h2>
+        <details name="current-details">
+          <summary>Visitor Centers</summary>
+          <ul id="visitor-centers-list"></ul>
+        </details>
+      </section>
+      <section class="activities">
+        <h2>Activities</h2>
+        <details name="current-details">
+          <summary>All Activities</summary>
+          <ul></ul>
+        </details>
       </section>
     </main>
     <footer id="park-footer">

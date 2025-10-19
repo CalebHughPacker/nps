@@ -19,6 +19,7 @@ function setHeaderInfo(data) {
 function setIntroInfo(data) {
   const name = document.querySelector(".intro .name");
   const desc = document.querySelector(".intro .desc");
+  if (!name || !desc) return; 
   name.textContent = data.fullName;
   desc.textContent=data.description;
 
@@ -30,6 +31,7 @@ function setIntroInfo(data) {
 
 function setInfoInfo(data){
   const mediaCard = document.querySelector(".info");
+   if (!mediaCard) return; 
   for (let i = 0; i < data.length; i++){
       mediaCard.innerHTML += mediaCardTemplate(data[i]);
   }

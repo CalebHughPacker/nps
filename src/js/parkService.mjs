@@ -232,3 +232,16 @@ export function getInfoLinks(data){
   });
   return images;
 }
+
+export async function getVisitorCenterData(parkCode) {
+  console.log("bruh");
+  const data = await getJson(`visitorcenters?parkCode=${parkCode}`);
+  return data.data;
+}
+
+export async function getParkAlerts(parkCode) {
+  console.log("bruh");
+  const data = await getJson(`alerts?parkCode=${parkCode}`);
+  return data.data;
+}
+
