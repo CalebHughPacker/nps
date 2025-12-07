@@ -55,7 +55,6 @@ async function init() {
     )
   ].join("");
 
-  // Gallery
   const galleryHTML = listTemplate(center.images, vcImageTemplate);
   document
     .querySelector(".vc-gallery")
