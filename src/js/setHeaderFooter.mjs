@@ -33,10 +33,8 @@ function parkInfoTemplate(info) {
 }
 
 export function setHeaderFooter(data) {
-  // Update header + footer
   document.querySelector("footer").innerHTML = footerInfoTemplate(data);
   document.querySelector(".hero-banner__content").innerHTML = parkInfoTemplate(data);
   
-  // Initialize navigation here
   enableNavigation();
 }

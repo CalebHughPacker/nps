@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visitor Center</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/visitor-center.css" />
+  <script type="module" src="js/visitor-center.js"></script>
+</head>
+
+<body>
+  <p class="disclaimer">
+    This is not a real NPS website. It is an educational exercise. If you
+    landed here by accident visit
+    <a href="parkUrl">[park name]</a>
+  </p>
+
+  <header>
+    <section class="global-header">
+      <a href="index.html" class="site-title">
+        <span class="logo" role="presentation"></span>
+        <span>National Park Service</span>
+      </a>
+      <div class="global-header__right">
+        <a class="search-icon" href="#park-footer">
+          <svg class="icon"><use xlink:href="/images/sprite.symbol.svg#search"></use></svg>
+          <span class="visually-hidden">Search</span>
+        </a>
+        <button id="global-nav-toggle">
+          <svg class="icon"><use xlink:href="/images/sprite.symbol.svg#menu"></use></svg>
+          <span class="visually-hidden">Open</span> Menu
+        </button>
+      </div>
+    </section>
+
+    <section id="park-header">
+      <div class="hero-banner">
+        <img src="" alt="" />
+        <div class="hero-banner__content">
+          <a href="#" class="hero-banner__title">Yellowstone</a>
+          <p class="hero-banner__subtitle">
+            <span>National Park</span>
+            <span>ID, MT, WY</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main id="main">
+    <h1 class="vc-name"></h1>
+    <section class="vc-info"></section>
+    <section class="vc-details-list">
+      <details name="vc-details" id="vcAddresses">
+        <summary>Addresses</summary>
+      </details>
+      <details name="vc-details" id="vcDirections">
+        <summary>Directions</summary>
+      </details>
+      <details name="vc-details" id="vcAmenities">
+        <summary>Amenities</summary>
+      </details>
+      <details name="vc-details" id="vcContact">
+        <summary>Contact Information</summary>
+      </details>
+    </section>
+    <section class="vc-gallery">
+      <h2>Image Gallery</h2>
+    </section>
+  </main>
+
+  <footer id="park-footer"></footer>
+</body>
+</html>

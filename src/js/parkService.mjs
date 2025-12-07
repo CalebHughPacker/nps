@@ -245,3 +245,8 @@ export async function getParkAlerts(parkCode) {
   return data.data;
 }
 
+export async function getParkVisitorCenterDetails(id) {
+  const data = await getJson(`visitorcenters?id=${id}`);
+  return data.data[0];
+}
+
