@@ -1,7 +1,7 @@
 import { getParkData, getInfoLinks } from "./parkService.mjs";
 import { setHeaderFooter } from "./setHeaderFooter.mjs";
 import { mediaCardTemplate } from "./templates.mjs";
-
+import { visitorCenterTemplate } from "./templates.mjs";
 // const parkData = getParkData();
 
 function setHeaderInfo(data) {
@@ -71,6 +71,9 @@ async function init(){
   setHeaderFooter(parkData);
   setIntroInfo(parkData);
   setInfoInfo(links);
+  const visitorCentersData = await getVisitorCenterData();
+  const html = visitorCentersData.map(visitorCenterTemplate).join("");
+  document.querySelector(".info").innerHTML = html;
 }
 
 init();

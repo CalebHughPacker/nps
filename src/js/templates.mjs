@@ -93,12 +93,11 @@ export function iconTemplate(iconId) {
   </svg>`;
 }
 
-export function vcDetailsTemplate(elementId, summaryText, iconId, content) {
-  return `<details name="vc-details" id="${elementId}">
-      <summary>
-        ${iconTemplate(iconId)}
-        ${summaryText}
-      </summary>
-      ${content}
-    </details>`;
+export function visitorCenterTemplate(center) {
+  return `
+  <li class="visitor-center">
+    <h4><a href="visitor-center.html?id=${center.id}">${center.name}</a></h4>
+    <p>${center.description}</p>
+    <p>${center.directionsInfo}</p>
+  </li>`;
 }
